@@ -12,7 +12,7 @@ const identity = {
     "Ethan",
     "Evelyn"],
     _age: [25, 23, 15, 20, 24, 10, 32, 45, 100, 92, 52, 22, 76],
-    _gender: ['male', 'female', 'non-gender'],
+    _gender: ['male', 'female', 'no-gender'],
     get name() {
         return this._names;
     },
@@ -30,7 +30,10 @@ const identity = {
     },
     set gender(input) {
         typeof input === 'string' ? this._gender.push(input) : console.log('Gender must be in string format!');
-    }
-
+    },
+    generateMessage() {
+        return `Your new identity has been created! \n\nNew name: ${identity.name[generateRandomNum(identity._names)]} \nNew age is: ${identity.age[generateRandomNum(identity._age)]} \nNew gender is: ${identity.gender[generateRandomNum(identity._gender)]}`;
+    },
 }
 
+console.log(identity.generateMessage());
