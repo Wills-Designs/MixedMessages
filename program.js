@@ -36,4 +36,5 @@ const identity = {
     },
 }
 
+//calls the generate message function and logs to console
 console.log(identity.generateMessage());
