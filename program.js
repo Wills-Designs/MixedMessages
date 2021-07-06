@@ -1,3 +1,7 @@
+//function that generates random number based off array length
+const generateRandomNum = arr => Math.floor(Math.random() * arr.length);
+
+//object that stores all message components
 const identity = {
     _names: ["Liam", "Olivia", "Noah", "Emma", "Oliver", "Ava","William","Sophia","Elijah","Isabella", "James", "Charlotte", "Benjamin",
     "Amelia",
@@ -27,5 +31,6 @@ const identity = {
     set gender(input) {
         typeof input === 'string' ? this._gender.push(input) : console.log('Gender must be in string format!');
     }
+
 }
 
